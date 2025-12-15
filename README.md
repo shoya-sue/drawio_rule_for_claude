@@ -1,0 +1,2 @@
+# drawio_rule_template
+ClaudeCodeなどのAIにdrawioを使って図解してもらうときのルール設定
