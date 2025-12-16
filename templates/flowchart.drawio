@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="26.0.0">
+  <diagram name="業務フロー図" id="flowchart-template">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" defaultFontFamily="Helvetica">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 1. 凡例グループ（最背面） -->
+        <mxCell id="legend" value="凡例" style="swimlane;horizontal=1;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#333333;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="40" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-start-box" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="35" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-start-text" value="開始/終了" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="35" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-proc-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="60" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-proc-text" value="処理" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dec-box" value="" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="85" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-dec-text" value="分岐" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="85" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 2. 図形（vertex） -->
+        <!-- 開始 -->
+        <mxCell id="start" value="開始" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 処理1 -->
+        <mxCell id="process-1" value="処理ステップ1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 分岐 -->
+        <mxCell id="decision-1" value="条件分岐" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="240" width="120" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- 処理2 -->
+        <mxCell id="process-2" value="処理ステップ2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="360" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 処理3 -->
+        <mxCell id="process-3" value="処理ステップ3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="280" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 終了 -->
+        <mxCell id="end" value="終了" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="100" y="460" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 3. 矢印（edge）を最後に記述 → 最前面 -->
+        <!-- 開始 → 処理1 -->
+        <mxCell id="edge-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="start" target="process-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 処理1 → 分岐 -->
+        <mxCell id="edge-2" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="process-1" target="decision-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 分岐 → 処理2（Yes） -->
+        <mxCell id="edge-3" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="decision-1" target="process-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 分岐 → 処理3（No） -->
+        <mxCell id="edge-4" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="decision-1" target="process-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 処理2 → 終了 -->
+        <mxCell id="edge-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="process-2" target="end">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 処理3 → 終了 -->
+        <mxCell id="edge-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="process-3" target="end">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="490" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

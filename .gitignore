@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Input data (user-specific)
+input/*
+!input/.gitkeep
+
+# Generated output files
+output/*
+!output/.gitkeep

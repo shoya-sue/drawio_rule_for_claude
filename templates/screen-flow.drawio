@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="26.0.0">
+  <diagram name="画面遷移図" id="screen-flow-template">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" defaultFontFamily="Helvetica">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 1. 凡例グループ（最背面） -->
+        <mxCell id="legend" value="凡例" style="swimlane;horizontal=1;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#333333;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="480" y="40" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-auth-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="35" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-auth-text" value="認証画面" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="35" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-list-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="60" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-list-text" value="一覧/詳細" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="60" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-edit-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="85" width="25" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-edit-text" value="編集画面" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="45" y="85" width="80" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 2. 図形（vertex） -->
+        <!-- ログイン画面 -->
+        <mxCell id="screen-login" value="ログイン画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontFamily=Helvetica;fontSize=18;fontColor=#333333;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="140" height="80" as="geometry" />
+        </mxCell>
+
+        <!-- ホーム画面 -->
+        <mxCell id="screen-home" value="ホーム画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="160" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 一覧画面 -->
+        <mxCell id="screen-list" value="一覧画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="40" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 詳細画面 -->
+        <mxCell id="screen-detail" value="詳細画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="260" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 編集画面 -->
+        <mxCell id="screen-edit" value="編集画面" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=18;fontColor=#333333;verticalAlign=top;spacingTop=10;" vertex="1" parent="1">
+          <mxGeometry x="260" y="400" width="140" height="70" as="geometry" />
+        </mxCell>
+
+        <!-- 3. 矢印（edge）を最後に記述 → 最前面 -->
+        <!-- ログイン → ホーム -->
+        <mxCell id="edge-1" value="ログイン成功" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="screen-login" target="screen-home">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- ホーム → 一覧 -->
+        <mxCell id="edge-2" value="一覧表示" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="screen-home" target="screen-list">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 一覧 → 詳細 -->
+        <mxCell id="edge-3" value="項目選択" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="screen-list" target="screen-detail">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 詳細 → 編集 -->
+        <mxCell id="edge-4" value="編集ボタン" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="screen-detail" target="screen-edit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 編集 → 詳細（戻る） -->
+        <mxCell id="edge-5" value="保存/キャンセル" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;dashed=1;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="screen-edit" target="screen-detail">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="435" />
+              <mxPoint x="230" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- 一覧 → ホーム（戻る） -->
+        <mxCell id="edge-6" value="戻る" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;dashed=1;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="screen-list" target="screen-home">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="315" />
+              <mxPoint x="20" y="195" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
