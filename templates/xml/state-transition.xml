@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Claude" version="26.0.0">
+  <diagram name="状態遷移図" id="state-transition-template">
+    <mxGraphModel dx="0" dy="0" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" background="none" defaultFontFamily="Helvetica">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- 1. 凡例グループ（最背面） -->
+        <mxCell id="legend" value="凡例" style="swimlane;horizontal=1;startSize=25;fillColor=#f5f5f5;strokeColor=#666666;fontFamily=Helvetica;fontSize=14;fontStyle=1;fontColor=#333333;collapsible=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="260" width="120" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-init-box" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="35" width="15" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-init-text" value="開始" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="35" y="32" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-state-box" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="60" width="20" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-state-text" value="状態" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="35" y="57" width="70" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-end-text" value="◉ 終了" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontFamily=Helvetica;fontSize=14;fontColor=#333333;" vertex="1" parent="legend">
+          <mxGeometry x="10" y="85" width="70" height="20" as="geometry" />
+        </mxCell>
+
+        <!-- 2. 図形（vertex） -->
+        <!-- 開始状態（黒丸） -->
+        <mxCell id="initial" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="50" y="55" width="30" height="30" as="geometry" />
+        </mxCell>
+
+        <!-- 状態: 注文受付 -->
+        <mxCell id="state-pending" value="注文受付" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="140" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 状態: 支払待ち -->
+        <mxCell id="state-payment" value="支払待ち" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 状態: 処理中 -->
+        <mxCell id="state-processing" value="処理中" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="460" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 状態: 完了 -->
+        <mxCell id="state-completed" value="完了" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 状態: キャンセル -->
+        <mxCell id="state-cancelled" value="キャンセル" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontFamily=Helvetica;fontSize=18;fontColor=#333333;" vertex="1" parent="1">
+          <mxGeometry x="300" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+
+        <!-- 終了状態（二重丸） -->
+        <mxCell id="final" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="770" y="55" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="final-inner" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#FFFFFF;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="775" y="60" width="20" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="final-center" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#000000;strokeColor=none;" vertex="1" parent="1">
+          <mxGeometry x="780" y="65" width="10" height="10" as="geometry" />
+        </mxCell>
+
+        <!-- 3. 矢印（edge）を最後に記述 → 最前面 -->
+        <!-- 開始 → 注文受付 -->
+        <mxCell id="trans-0" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="initial" target="state-pending">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 注文受付 → 支払待ち -->
+        <mxCell id="trans-1" value="注文確定" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-pending" target="state-payment">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 支払待ち → 処理中 -->
+        <mxCell id="trans-2" value="支払完了" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-payment" target="state-processing">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 処理中 → 完了 -->
+        <mxCell id="trans-3" value="発送完了" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-processing" target="state-completed">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 完了 → 終了 -->
+        <mxCell id="trans-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#333333;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-completed" target="final">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 注文受付 → キャンセル -->
+        <mxCell id="trans-cancel-1" value="キャンセル" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;dashed=1;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-pending" target="state-cancelled">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- 支払待ち → キャンセル -->
+        <mxCell id="trans-cancel-2" value="タイムアウト" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;strokeColor=#b85450;dashed=1;fontFamily=Helvetica;fontSize=12;fontColor=#666666;endArrow=classic;endFill=1;" edge="1" parent="1" source="state-payment" target="state-cancelled">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

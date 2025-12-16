@@ -17,7 +17,7 @@ Claudeに図解を依頼する前に確認する項目：
 ### ルール確認
 
 - [ ] CLAUDE.md（またはrules/core-rules.md）がプロジェクトに含まれている
-- [ ] テンプレート（templates/basic.drawio）を参照するよう指示した（任意）
+- [ ] テンプレート（templates/drawio/basic.drawio）を参照するよう指示した（任意）
 
 ---
 

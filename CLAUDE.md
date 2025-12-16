@@ -163,7 +163,8 @@ XMLの記述順序が描画順序を決定します：
 | `rules/layout-guide.md` | **座標・サイズ・間隔・接続のルール** |
 | `rules/prompt-template.md` | 依頼時のプロンプトテンプレート |
 | `rules/checklist.md` | 生成前後のチェックリスト |
-| `templates/*.drawio` | 図解種類別のXMLテンプレート |
+| `templates/drawio/*.drawio` | 図解種類別テンプレート（drawio形式） |
+| `templates/xml/*.xml` | 図解種類別テンプレート（XML形式） |
 
 ## スタイルクイックリファレンス
 

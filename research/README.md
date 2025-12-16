@@ -498,13 +498,33 @@ drawio_rule_for_claude/
 │
 ├── rules/
 │   ├── core-rules.md      # コアルール（Web/Desktop用にも）
+│   ├── style-guide.md     # カラー・図形・フォントのルール
+│   ├── layout-guide.md    # 座標・サイズ・間隔・接続のルール
 │   ├── checklist.md       # 生成前後チェックリスト
 │   └── prompt-template.md # 依頼用プロンプトテンプレート
 │
 ├── templates/
-│   ├── basic.drawio       # 基本テンプレートXML
-│   ├── flowchart.drawio   # フローチャート用
-│   └── architecture.drawio # アーキテクチャ図用
+│   ├── drawio/            # drawio形式テンプレート
+│   │   ├── basic.drawio
+│   │   ├── flowchart.drawio
+│   │   ├── architecture.drawio
+│   │   ├── context.drawio
+│   │   ├── er-diagram.drawio
+│   │   ├── screen-flow.drawio
+│   │   ├── sequence.drawio
+│   │   ├── state-transition.drawio
+│   │   └── usecase.drawio
+│   │
+│   └── xml/               # XML形式テンプレート（他ツール連携用）
+│       ├── basic.xml
+│       ├── flowchart.xml
+│       ├── architecture.xml
+│       ├── context.xml
+│       ├── er-diagram.xml
+│       ├── screen-flow.xml
+│       ├── sequence.xml
+│       ├── state-transition.xml
+│       └── usecase.xml
 │
 └── examples/
     ├── good-example.drawio  # 良い例
